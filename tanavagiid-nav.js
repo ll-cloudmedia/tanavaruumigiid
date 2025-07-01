@@ -16,6 +16,9 @@
     const navHTML = `
       <div id="tanavagiid-nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 99999; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; transition: all 0.3s ease;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: flex-end; gap: 32px; flex-wrap: wrap;">
+
+                  <a href="https://tanavagiid.ee" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Avaleht</a>
+
           
           <!-- Tänavatüübid Dropdown -->
           <div class="nav-dropdown" style="position: relative; display: inline-block;">
@@ -123,9 +126,8 @@
           </div>
           
           <!-- Teised lingid -->
-          <a href="/edulood" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Edulood</a>
           <a href="/kiired-voidud" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Kiired Võidud</a>
-          <a href="/tooristale" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Tööristale</a>
+          <a href="/ruumijuhtimine" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Ruumijuhtimine</a>
           
           <!-- Otsing -->
           <div style="padding: 8px 12px; cursor: pointer; border-radius: 6px; transition: all 0.2s; color: #374151;">
