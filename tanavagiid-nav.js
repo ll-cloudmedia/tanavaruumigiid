@@ -127,6 +127,8 @@
           
           <!-- Teised lingid -->
           <a href="/kiired-voidud" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Kiired Võidud</a>
+                    <a href="/kiired-voidud" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Giid</a>
+
           <a href="/ruumijuhtimine" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Ruumijuhtimine</a>
           
           <!-- Otsing -->
