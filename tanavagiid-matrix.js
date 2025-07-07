@@ -284,27 +284,16 @@
         <div class="matrix-grid">
           <!-- Row 1: Kõrge liikuvus (Ühendustänavad) -->
           <a href="/tanavatyyp/lihtne-yhendustanav" class="street-type-card bg-red">
-            <div class="mobile-info">
-              <span>Liikuvus: Kõrge</span>
-              <span>Kohaväärtus: Madal</span>
-            </div>
-            <h3 class="card-title">Lihtne ühendustänav</h3>
+                        <h3 class="card-title">Lihtne ühendustänav</h3>
             <p class="card-description">Magistraal, linna või asula põhitänav või asula piirkondi ühendav, eelkõige läbiliikumiseks mõeldud tänav</p>
-            <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
-            </div>
+           
           </a>
           
           <a href="/tanavatyyp/linlik-yhendustanav" class="street-type-card bg-orange">
-            <div class="mobile-info">
-              <span>Liikuvus: Kõrge</span>
-              <span>Kohaväärtus: Keskmine</span>
-            </div>
+         
             <h3 class="card-title">Linlik ühendustänav</h3>
             <p class="card-description">Suure liiklusväärtusega ja keskmise kohaväärtusega tänav, mis ühendab linna erinevaid piirkondi ning pakub mitmekesist linnaruumi kogemust.</p>
-            <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
-            </div>
+           
           </a>
           
           <a href="/tanavatyyp/esinduslik-yhendustanav" class="street-type-card bg-yellow">
