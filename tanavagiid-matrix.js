@@ -10,7 +10,7 @@
       <div class="matrix-container" style="position: relative; margin-left: 80px; margin-top: 60px;">
         
         <!-- Y-telje täispikk nool -->
-        <svg style="position: absolute; left: -60px; top: -40px; width: 40px; height: calc(100% + 80px); z-index: 1;">
+        <svg style="position: absolute; left: -60px; width: 40px; height: calc(100% + 80px); z-index: 1;">
           <defs>
             <marker id="arrowhead-y" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="0">
               <polygon points="0 0, 10 3.5, 0 7" fill="#374151" />
