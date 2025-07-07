@@ -301,26 +301,26 @@
            
             <h3 class="card-title">Esinduslik ühendustänav</h3>
             <p class="card-description">Suure liiklusväärtusega ja kõrge kohaväärtusega prestiižne tänav, mis on linna nägu ja avaliku ruumi kese.</p>
-            
+           
           </a>
           
           <!-- Row 2: Keskmine liikuvus (Jaotustänavad) -->
           <a href="/tanavatyyp/lihtne-jaotustanav" class="street-type-card bg-blue">
-           
+            
             <h3 class="card-title">Lihtne jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja lihtsa kohaväärtusega peamiselt läbiliikumiseks ja juurdepääsuks kasutatav tänav, mille ääres ei asu suure kasutajate arvuga sihtkohti ja ühissõidukipeatuseid.</p>
-            
+           
           </a>
           
           <a href="/tanavatyyp/linlik-jaotustanav" class="street-type-card bg-indigo">
-            
+           
             <h3 class="card-title">Linlik jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub tasakaalustatud linnaruumi kogemust ja toetab nii liikuvust kui ka kohalikku elu.</p>
            
           </a>
           
           <a href="/tanavatyyp/esinduslik-jaotustanav" class="street-type-card bg-purple">
-            
+           
             <h3 class="card-title">Esinduslik jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja kõrge kohaväärtusega kvaliteetne avalik ruum, mis on piirkonna uhkus ja identiteedi kandja.</p>
             
@@ -331,18 +331,18 @@
             
             <h3 class="card-title">Lihtne kodutänav</h3>
             <p class="card-description">Kitsad, vähese liiklusega ja hõreda hoonestusega tänavad, eelkõige asumite elukeskkonna olulised osad, millele tuleb ehitamisel ja rekonstrueerimisel olulist tähelepanu pöörata.</p>
-           
+            
           </a>
           
           <a href="/tanavatyyp/linlik-kodutanav" class="street-type-card bg-teal">
-           
+            
             <h3 class="card-title">Linlik kodutänav</h3>
             <p class="card-description">Madala liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub kvaliteetset elukeskkonda tihedas linnastruktuuris.</p>
-           
+          
           </a>
           
           <a href="/tanavatyyp/esinduslik-kodutanav" class="street-type-card bg-emerald">
-           
+            
             <h3 class="card-title">Esinduslik kodutänav</h3>
             <p class="card-description">Prestiižne elukeskkond, mis pakub erakordset elukvaliteeti ja on piirkonna uhkus.</p>
            
