@@ -282,7 +282,7 @@
         <div class="x-axis-arrow"></div>
         
         <div class="matrix-grid">
-          <!-- Row 1: Kõrge liikuvus (Ühendustänavad) -->
+          <!-- Row 1: Kõrge baba liikuvus (Ühendustänavad) -->
           <a href="/tanavatyyp/lihtne-yhendustanav" class="street-type-card bg-red">
           
             <h3 class="card-title">Lihtne ühendustänav</h3>
