@@ -1,5 +1,5 @@
 (function() {
-  // Leia praegune script tag ja lisa maatriks selle asemele
+  // Leia praegune script tag
   const currentScript = document.currentScript;
   
   // Loo maatriksi HTML
@@ -15,23 +15,24 @@
         
         .matrix-container {
           position: relative;
-          margin-left: 60px;
+          margin-left: 120px;
+          margin-top: 60px;
         }
         
         .y-axis-label {
           position: absolute;
-          left: -50px;
+          left: -80px;
           top: 50%;
           transform: translateY(-50%) rotate(-90deg);
           font-size: 1.125rem;
           font-weight: 600;
-          color: #374151;
+          color: #475569;
           white-space: nowrap;
         }
         
         .y-axis-values {
           position: absolute;
-          left: -90px;
+          left: -50px;
           top: 0;
           height: 100%;
           display: flex;
@@ -50,9 +51,8 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
-          margin-bottom: 24px;
+          margin-bottom: 40px;
           position: relative;
-          z-index: 2;
         }
         
         .street-type-card {
@@ -69,6 +69,7 @@
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
+          min-height: 200px;
         }
         
         .street-type-card:hover {
@@ -82,7 +83,7 @@
           font-size: 1.125rem;
           font-weight: 600;
           color: #0f172a;
-          margin-bottom: 8px;
+          margin-bottom: 12px;
           line-height: 1.4;
         }
         
@@ -91,6 +92,7 @@
           font-size: 0.875rem;
           margin-bottom: 16px;
           line-height: 1.5;
+          flex-grow: 1;
         }
         
         .card-link {
@@ -99,30 +101,49 @@
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          font-weight: bold;
-          color: #374151;
+          font-weight: 500;
+          color: #3b82f6;
+        }
+        
+        .mobile-info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.75rem;
+          color: #64748b;
+          margin-bottom: 12px;
+        }
+        
+        .mobile-info span {
+          background: rgba(255,255,255,0.8);
+          padding: 2px 6px;
+          border-radius: 4px;
         }
         
         .x-axis-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-top: 24px;
+          margin-top: 20px;
           position: relative;
         }
         
         .x-axis-value {
           font-size: 0.875rem;
           color: #64748b;
+          font-weight: 500;
         }
         
         .x-axis-label {
           font-size: 1.125rem;
           font-weight: 600;
-          color: #374151;
+          color: #475569;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -30px;
         }
         
-        /* Noolte stiilid */
+        /* Nooled */
         .axis-arrows {
           position: absolute;
           top: 0;
@@ -133,92 +154,103 @@
           z-index: 1;
         }
         
-        .y-axis-arrow {
-          position: absolute;
-          left: -30px;
-          top: 0;
-          width: 2px;
-          height: 320px;
-          background: #475569;
+        .axis-arrow {
+          stroke: #475569;
+          stroke-width: 2;
+          fill: none;
           transition: all 0.3s ease;
         }
         
-        .y-axis-arrow::after {
-          content: '';
-          position: absolute;
-          top: -8px;
-          left: -4px;
-          width: 0;
-          height: 0;
-          border-left: 5px solid transparent;
-          border-right: 5px solid transparent;
-          border-bottom: 12px solid #475569;
+        .axis-arrow:hover {
+          stroke: #334155;
+          stroke-width: 2.5;
+        }
+        
+        .arrow-marker {
+          fill: #475569;
           transition: all 0.3s ease;
         }
         
-        .x-axis-arrow {
-          position: absolute;
-          bottom: -30px;
-          left: 0;
-          width: 520px;
-          height: 2px;
-          background: #475569;
-          transition: all 0.3s ease;
+        .axis-arrow:hover + .arrow-marker,
+        .arrow-marker:hover {
+          fill: #334155;
         }
         
-        .x-axis-arrow::after {
-          content: '';
-          position: absolute;
-          top: -4px;
-          right: -8px;
-          width: 0;
-          height: 0;
-          border-top: 5px solid transparent;
-          border-bottom: 5px solid transparent;
-          border-left: 12px solid #475569;
-          transition: all 0.3s ease;
+        /* Värviklassid - PARANDATUD hover efektidega */
+        .bg-red { 
+          background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important; 
+        }
+        .bg-red:hover { 
+          background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important; 
         }
         
-        /* Hover efektid noolte jaoks */
-        .matrix-container:hover .y-axis-arrow {
-          background: #334155;
-          width: 2.5px;
+        .bg-orange { 
+          background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important; 
+        }
+        .bg-orange:hover { 
+          background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important; 
         }
         
-        .matrix-container:hover .y-axis-arrow::after {
-          border-bottom-color: #334155;
+        .bg-yellow { 
+          background: linear-gradient(135deg, #fefce8 0%, #fde047 100%) !important; 
+        }
+        .bg-yellow:hover { 
+          background: linear-gradient(135deg, #fefce8 0%, #fde047 100%) !important; 
         }
         
-        .matrix-container:hover .x-axis-arrow {
-          background: #334155;
-          height: 2.5px;
+        .bg-blue { 
+          background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%) !important; 
+        }
+        .bg-blue:hover { 
+          background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%) !important; 
         }
         
-        .matrix-container:hover .x-axis-arrow::after {
-          border-left-color: #334155;
+        .bg-indigo { 
+          background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%) !important; 
+        }
+        .bg-indigo:hover { 
+          background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%) !important; 
         }
         
-        /* Color classes */
-        .bg-red { background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); }
-        .bg-orange { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); }
-        .bg-yellow { background: linear-gradient(135deg, #fefce8 0%, #fde047 100%); }
-        .bg-blue { background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%); }
-        .bg-indigo { background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%); }
-        .bg-purple { background: linear-gradient(135deg, #faf5ff 0%, #d8b4fe 100%); }
-        .bg-green { background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%); }
-        .bg-teal { background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%); }
-        .bg-emerald { background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%); }
+        .bg-purple { 
+          background: linear-gradient(135deg, #faf5ff 0%, #d8b4fe 100%) !important; 
+        }
+        .bg-purple:hover { 
+          background: linear-gradient(135deg, #faf5ff 0%, #d8b4fe 100%) !important; 
+        }
         
-        /* Mobile responsive */
+        .bg-green { 
+          background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%) !important; 
+        }
+        .bg-green:hover { 
+          background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%) !important; 
+        }
+        
+        .bg-teal { 
+          background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%) !important; 
+        }
+        .bg-teal:hover { 
+          background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%) !important; 
+        }
+        
+        .bg-emerald { 
+          background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%) !important; 
+        }
+        .bg-emerald:hover { 
+          background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%) !important; 
+        }
+        
+        /* Mobiilne - TELJED PEIDETUD */
         @media (max-width: 768px) {
           .matrix-container {
             margin-left: 0;
+            margin-top: 20px;
           }
           
           .y-axis-label,
           .y-axis-values,
           .axis-arrows {
-            display: none;
+            display: none !important;
           }
           
           .matrix-grid {
@@ -227,20 +259,11 @@
           
           .street-type-card {
             padding: 16px;
+            min-height: 180px;
           }
           
-          .mobile-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: #64748b;
-            margin-bottom: 12px;
-          }
-          
-          .mobile-info span {
-            background: #f8fafc;
-            padding: 2px 6px;
-            border-radius: 4px;
+          .x-axis-container {
+            display: none !important;
           }
         }
         
@@ -259,140 +282,150 @@
           <span class="y-axis-value">Madal</span>
         </div>
         
-        <!-- Nooled -->
-        <div class="axis-arrows">
-          <div class="y-axis-arrow"></div>
-          <div class="x-axis-arrow"></div>
-        </div>
+        <!-- SVG nooled -->
+        <svg class="axis-arrows" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <marker id="arrowhead-y" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" class="arrow-marker" />
+            </marker>
+            <marker id="arrowhead-x" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" class="arrow-marker" />
+            </marker>
+          </defs>
+          <!-- Y-telg (vertikaalne nool) -->
+          <line x1="2" y1="95" x2="2" y2="5" class="axis-arrow" marker-end="url(#arrowhead-y)" />
+          <!-- X-telg (horisontaalne nool) -->
+          <line x1="5" y1="92" x2="95" y2="92" class="axis-arrow" marker-end="url(#arrowhead-x)" />
+        </svg>
         
         <div class="matrix-grid">
-          <!-- Row 1: High Mobility (Ühendustänavad) -->
+          <!-- Row 1: Kõrge liikuvus (Ühendustänavad) -->
           <a href="/tanavatyyp/lihtne-yhendustanav" class="street-type-card bg-red">
             <div class="mobile-info">
               <span>Liikuvus: Kõrge</span>
-              <span>Kohaväärtus: Madal</span>
+              <span>Kohaväärtus: Lihtne</span>
             </div>
             <h3 class="card-title">Lihtne ühendustänav</h3>
             <p class="card-description">Magistraal, linna või asula põhitänav või asula piirkondi ühendav, eelkõige läbiliikumiseks mõeldud tänav</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/linlik-yhendustanav" class="street-type-card bg-orange">
             <div class="mobile-info">
               <span>Liikuvus: Kõrge</span>
-              <span>Kohaväärtus: Keskmine</span>
+              <span>Kohaväärtus: Linlik</span>
             </div>
             <h3 class="card-title">Linlik ühendustänav</h3>
             <p class="card-description">Suure liiklusväärtusega ja keskmise kohaväärtusega tänav, mis ühendab linna erinevaid piirkondi ning pakub mitmekesist linnaruumi kogemust.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/esinduslik-yhendustanav" class="street-type-card bg-yellow">
             <div class="mobile-info">
               <span>Liikuvus: Kõrge</span>
-              <span>Kohaväärtus: Kõrge</span>
+              <span>Kohaväärtus: Esinduslik</span>
             </div>
             <h3 class="card-title">Esinduslik ühendustänav</h3>
             <p class="card-description">Suure liiklusväärtusega ja kõrge kohaväärtusega prestiižne tänav, mis on linna nägu ja avaliku ruumi kese.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
-          <!-- Row 2: Medium Mobility (Jaotustänavad) -->
+          <!-- Row 2: Keskmine liikuvus (Jaotustänavad) -->
           <a href="/tanavatyyp/lihtne-jaotustanav" class="street-type-card bg-blue">
             <div class="mobile-info">
               <span>Liikuvus: Keskmine</span>
-              <span>Kohaväärtus: Madal</span>
+              <span>Kohaväärtus: Lihtne</span>
             </div>
             <h3 class="card-title">Lihtne jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja lihtsa kohaväärtusega peamiselt läbiliikumiseks ja juurdepääsuks kasutatav tänav, mille ääres ei asu suure kasutajate arvuga sihtkohti ja ühissõidukipeatuseid.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/linlik-jaotustanav" class="street-type-card bg-indigo">
             <div class="mobile-info">
               <span>Liikuvus: Keskmine</span>
-              <span>Kohaväärtus: Keskmine</span>
+              <span>Kohaväärtus: Linlik</span>
             </div>
             <h3 class="card-title">Linlik jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub tasakaalustatud linnaruumi kogemust ja toetab nii liikuvust kui ka kohalikku elu.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/esinduslik-jaotustanav" class="street-type-card bg-purple">
             <div class="mobile-info">
               <span>Liikuvus: Keskmine</span>
-              <span>Kohaväärtus: Kõrge</span>
+              <span>Kohaväärtus: Esinduslik</span>
             </div>
             <h3 class="card-title">Esinduslik jaotustänav</h3>
             <p class="card-description">Keskmise liiklusväärtusega ja kõrge kohaväärtusega kvaliteetne avalik ruum, mis on piirkonna uhkus ja identiteedi kandja.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
-          <!-- Row 3: Low Mobility (Kodutänavad) -->
+          <!-- Row 3: Madal liikuvus (Kodutänavad) -->
           <a href="/tanavatyyp/lihtne-kodutanav" class="street-type-card bg-green">
             <div class="mobile-info">
               <span>Liikuvus: Madal</span>
-              <span>Kohaväärtus: Madal</span>
+              <span>Kohaväärtus: Lihtne</span>
             </div>
             <h3 class="card-title">Lihtne kodutänav</h3>
             <p class="card-description">Kitsad, vähese liiklusega ja hõreda hoonestusega tänavad, eelkõige asumite elukeskkonna olulised osad, millele tuleb ehitamisel ja rekonstrueerimisel olulist tähelepanu pöörata.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/linlik-kodutanav" class="street-type-card bg-teal">
             <div class="mobile-info">
               <span>Liikuvus: Madal</span>
-              <span>Kohaväärtus: Keskmine</span>
+              <span>Kohaväärtus: Linlik</span>
             </div>
             <h3 class="card-title">Linlik kodutänav</h3>
             <p class="card-description">Madala liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub kvaliteetset elukeskkonda tihedas linnastruktuuris.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
           
           <a href="/tanavatyyp/esinduslik-kodutanav" class="street-type-card bg-emerald">
             <div class="mobile-info">
               <span>Liikuvus: Madal</span>
-              <span>Kohaväärtus: Kõrge</span>
+              <span>Kohaväärtus: Esinduslik</span>
             </div>
             <h3 class="card-title">Esinduslik kodutänav</h3>
             <p class="card-description">Prestiižne elukeskkond, mis pakub erakordset elukvaliteeti ja on piirkonna uhkus.</p>
             <div class="card-link">
-              <span>Vaata juhiseid ➡️</span>
+              <span>Vaata juhiseid →</span>
             </div>
           </a>
         </div>
         
         <div class="x-axis-container">
           <span class="x-axis-value">Lihtne</span>
-          <span class="x-axis-label">Kohaväärtus</span>
           <span class="x-axis-value">Linlik</span>
+          <span class="x-axis-value">Esinduslik</span>
+          <span class="x-axis-label">Kohaväärtus</span>
         </div>
       </div>
     </div>
   `;
   
-  // Lisa maatriks DOM-i
+  // Lisa maatriks script tagi asukohta
   if (currentScript && currentScript.parentNode) {
     const matrixDiv = document.createElement('div');
     matrixDiv.innerHTML = matrixHTML;
-    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript);
-    currentScript.remove();
+    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript.nextSibling);
   } else {
     // Fallback - lisa lehe lõppu
     document.addEventListener('DOMContentLoaded', function() {
