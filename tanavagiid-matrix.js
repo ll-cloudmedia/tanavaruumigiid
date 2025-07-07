@@ -1,8 +1,8 @@
 (function() {
-  // Find the current script tag
+  // Leia praegune script tag ja lisa maatriks selle asemele
   const currentScript = document.currentScript;
   
-  // Create the matrix HTML
+  // Loo maatriksi HTML
   const matrixHTML = `
     <div id="street-types-matrix">
       <style>
@@ -11,26 +11,6 @@
           margin: 0 auto;
           padding: 20px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        .matrix-header {
-          text-align: center;
-          margin-bottom: 60px;
-        }
-        
-        .matrix-title {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: #0f172a;
-          margin-bottom: 16px;
-        }
-        
-        .matrix-subtitle {
-          font-size: 1.25rem;
-          color: #64748b;
-          max-width: 600px;
-          margin: 0 auto;
-          line-height: 1.6;
         }
         
         .matrix-container {
@@ -45,7 +25,7 @@
           transform: translateY(-50%) rotate(-90deg);
           font-size: 1.125rem;
           font-weight: 600;
-          color: #475569;
+          color: #374151;
           white-space: nowrap;
         }
         
@@ -71,10 +51,8 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
           margin-bottom: 24px;
-        }
-        
-        .matrix-row {
-          display: contents;
+          position: relative;
+          z-index: 2;
         }
         
         .street-type-card {
@@ -91,18 +69,6 @@
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
-          padding: 1rem;
-          text-decoration: none;
-          color: inherit;
-        }
-
-        .card-link {
-          margin-top: auto;
-          font-size: 0.875rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-weight: bold;
         }
         
         .street-type-card:hover {
@@ -110,28 +76,6 @@
           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
           text-decoration: none;
           color: inherit;
-        }
-        
-        .card-header {
-          display: flex;
-          justify-content: between;
-          align-items: center;
-          margin-bottom: 12px;
-        }
-        
-        .card-icon {
-          width: 24px;
-          height: 24px;
-          color: #374151;
-        }
-        
-        .card-badge {
-          background: #f1f5f9;
-          color: #475569;
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 0.75rem;
-          font-weight: 500;
         }
         
         .card-title {
@@ -149,10 +93,14 @@
           line-height: 1.5;
         }
         
-        .arrow-icon {
-          width: 16px;
-          height: 16px;
-          stroke-width: 2;
+        .card-link {
+          margin-top: auto;
+          font-size: 0.875rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: bold;
+          color: #374151;
         }
         
         .x-axis-container {
@@ -160,6 +108,7 @@
           justify-content: space-between;
           align-items: center;
           margin-top: 24px;
+          position: relative;
         }
         
         .x-axis-value {
@@ -170,10 +119,10 @@
         .x-axis-label {
           font-size: 1.125rem;
           font-weight: 600;
-          color: #475569;
+          color: #374151;
         }
         
-        /* Axis arrows */
+        /* Noolte stiilid */
         .axis-arrows {
           position: absolute;
           top: 0;
@@ -184,25 +133,69 @@
           z-index: 1;
         }
         
-        .axis-arrow {
-          stroke: #475569;
-          stroke-width: 2;
-          fill: none;
+        .y-axis-arrow {
+          position: absolute;
+          left: -30px;
+          top: 0;
+          width: 2px;
+          height: 320px;
+          background: #475569;
           transition: all 0.3s ease;
         }
         
-        .axis-arrow-head {
-          fill: #475569;
+        .y-axis-arrow::after {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: -4px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 12px solid #475569;
           transition: all 0.3s ease;
         }
         
-        .matrix-container:hover .axis-arrow {
-          stroke: #334155;
-          stroke-width: 2.5;
+        .x-axis-arrow {
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          width: 520px;
+          height: 2px;
+          background: #475569;
+          transition: all 0.3s ease;
         }
         
-        .matrix-container:hover .axis-arrow-head {
-          fill: #334155;
+        .x-axis-arrow::after {
+          content: '';
+          position: absolute;
+          top: -4px;
+          right: -8px;
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 12px solid #475569;
+          transition: all 0.3s ease;
+        }
+        
+        /* Hover efektid noolte jaoks */
+        .matrix-container:hover .y-axis-arrow {
+          background: #334155;
+          width: 2.5px;
+        }
+        
+        .matrix-container:hover .y-axis-arrow::after {
+          border-bottom-color: #334155;
+        }
+        
+        .matrix-container:hover .x-axis-arrow {
+          background: #334155;
+          height: 2.5px;
+        }
+        
+        .matrix-container:hover .x-axis-arrow::after {
+          border-left-color: #334155;
         }
         
         /* Color classes */
@@ -230,14 +223,6 @@
           
           .matrix-grid {
             grid-template-columns: 1fr;
-          }
-          
-          .matrix-title {
-            font-size: 2rem;
-          }
-          
-          .matrix-subtitle {
-            font-size: 1.125rem;
           }
           
           .street-type-card {
@@ -274,16 +259,11 @@
           <span class="y-axis-value">Madal</span>
         </div>
         
-        <!-- SVG Arrows -->
-        <svg class="axis-arrows" viewBox="0 0 600 400">
-          <!-- Y-axis arrow (vertical) -->
-          <line class="axis-arrow" x1="30" y1="380" x2="30" y2="20" />
-          <polygon class="axis-arrow-head" points="30,20 25,30 35,30" />
-          
-          <!-- X-axis arrow (horizontal) -->
-          <line class="axis-arrow" x1="30" y1="380" x2="580" y2="380" />
-          <polygon class="axis-arrow-head" points="580,380 570,375 570,385" />
-        </svg>
+        <!-- Nooled -->
+        <div class="axis-arrows">
+          <div class="y-axis-arrow"></div>
+          <div class="x-axis-arrow"></div>
+        </div>
         
         <div class="matrix-grid">
           <!-- Row 1: High Mobility (Ühendustänavad) -->
@@ -407,13 +387,16 @@
     </div>
   `;
   
-  // Insert the matrix HTML after the current script
+  // Lisa maatriks DOM-i
   if (currentScript && currentScript.parentNode) {
     const matrixDiv = document.createElement('div');
     matrixDiv.innerHTML = matrixHTML;
-    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript.nextSibling);
+    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript);
+    currentScript.remove();
   } else {
-    // Fallback: append to body
-    document.body.insertAdjacentHTML('beforeend', matrixHTML);
+    // Fallback - lisa lehe lõppu
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.insertAdjacentHTML('beforeend', matrixHTML);
+    });
   }
 })();
