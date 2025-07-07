@@ -1,10 +1,7 @@
 (function() {
   // Leia praegune script tag
-  const currentScript = document.currentScript || (function() {
-    const scripts = document.getElementsByTagName('script');
-    return scripts[scripts.length - 1];
-  })();
-
+  const currentScript = document.currentScript;
+  
   // Loo maatriksi HTML
   const matrixHTML = `
     <div id="street-types-matrix">
@@ -38,23 +35,32 @@
         
         .matrix-container {
           position: relative;
-          margin-left: 60px;
+          margin-left: 80px;
         }
         
         .y-axis-label {
           position: absolute;
-          left: -50px;
+          left: -70px;
           top: 50%;
           transform: translateY(-50%) rotate(-90deg);
           font-size: 1.125rem;
           font-weight: 600;
           color: #374151;
           white-space: nowrap;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .y-axis-arrow {
+          width: 16px;
+          height: 16px;
+          transform: rotate(90deg);
         }
         
         .y-axis-values {
           position: absolute;
-          left: -90px;
+          left: -110px;
           top: 0;
           height: 100%;
           display: flex;
@@ -163,6 +169,7 @@
           justify-content: space-between;
           align-items: center;
           margin-top: 24px;
+          position: relative;
         }
         
         .x-axis-value {
@@ -174,6 +181,14 @@
           font-size: 1.125rem;
           font-weight: 600;
           color: #374151;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .x-axis-arrow {
+          width: 16px;
+          height: 16px;
         }
         
         /* Color classes */
@@ -237,7 +252,12 @@
       </style>
       
       <div class="matrix-container">
-        <div class="y-axis-label">Liikuvus</div>
+        <div class="y-axis-label">
+          <svg class="y-axis-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+          </svg>
+          Liikuvus
+        </div>
         <div class="y-axis-values">
           <span class="y-axis-value">Kõrge</span>
           <span class="y-axis-value">Keskmine</span>
@@ -359,19 +379,27 @@
         
         <div class="x-axis-container">
           <span class="x-axis-value">Lihtne</span>
-          <span class="x-axis-label">Kohaväärtus</span>
+          <div class="x-axis-label">
+            Kohaväärtus
+            <svg class="x-axis-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
           <span class="x-axis-value">Esinduslik</span>
         </div>
       </div>
     </div>
   `;
-
-  // Lisa maatriks täpselt script tagi asukohta
+  
+  // Lisa maatriks script tagi asukohta
   if (currentScript && currentScript.parentNode) {
     const matrixDiv = document.createElement('div');
     matrixDiv.innerHTML = matrixHTML;
-    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript);
-    // Eemalda script tag pärast sisestamist
-    currentScript.remove();
+    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript.nextSibling);
+  } else {
+    // Fallback - lisa lehe lõppu
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.insertAdjacentHTML('beforeend', matrixHTML);
+    });
   }
 })();
