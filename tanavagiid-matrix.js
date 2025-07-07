@@ -144,7 +144,7 @@
         /* Nooled */
         .y-axis-arrow {
           position: absolute;
-          left: 0;
+          left: -10;
           top: 0;
           height: 100%;
           width: 2px;
