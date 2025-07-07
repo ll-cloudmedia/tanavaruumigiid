@@ -1,5 +1,5 @@
 (function() {
-  // Leia praegune script tag
+  // Leia praegune script tag ja asenda see maatriksiga
   const currentScript = document.currentScript;
   
   // Loo maatriksi HTML
@@ -13,54 +13,26 @@
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
-        .matrix-header {
-          text-align: center;
-          margin-bottom: 60px;
-        }
-        
-        .matrix-title {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: #0f172a;
-          margin-bottom: 16px;
-        }
-        
-        .matrix-subtitle {
-          font-size: 1.25rem;
-          color: #64748b;
-          max-width: 600px;
-          margin: 0 auto;
-          line-height: 1.6;
-        }
-        
         .matrix-container {
           position: relative;
-          margin-left: 80px;
+          margin-left: 120px;
+          margin-bottom: 80px;
         }
         
         .y-axis-label {
           position: absolute;
-          left: -70px;
+          left: -60px;
           top: 50%;
           transform: translateY(-50%) rotate(-90deg);
           font-size: 1.125rem;
           font-weight: 600;
           color: #374151;
           white-space: nowrap;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-        
-        .y-axis-arrow {
-          width: 16px;
-          height: 16px;
-          transform: rotate(90deg);
         }
         
         .y-axis-values {
           position: absolute;
-          left: -110px;
+          left: -100px;
           top: 0;
           height: 100%;
           display: flex;
@@ -82,10 +54,6 @@
           margin-bottom: 24px;
         }
         
-        .matrix-row {
-          display: contents;
-        }
-        
         .street-type-card {
           background: white;
           border-radius: 12px;
@@ -100,18 +68,7 @@
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
-          padding: 1rem;
-          text-decoration: none;
-          color: inherit;
-        }
-
-        .card-link {
-          margin-top: auto;
-          font-size: 0.875rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-weight: bold;
+          min-height: 200px;
         }
         
         .street-type-card:hover {
@@ -119,28 +76,6 @@
           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
           text-decoration: none;
           color: inherit;
-        }
-        
-        .card-header {
-          display: flex;
-          justify-content: between;
-          align-items: center;
-          margin-bottom: 12px;
-        }
-        
-        .card-icon {
-          width: 24px;
-          height: 24px;
-          color: #374151;
-        }
-        
-        .card-badge {
-          background: #f1f5f9;
-          color: #475569;
-          padding: 2px 8px;
-          border-radius: 12px;
-          font-size: 0.75rem;
-          font-weight: 500;
         }
         
         .card-title {
@@ -156,19 +91,38 @@
           font-size: 0.875rem;
           margin-bottom: 16px;
           line-height: 1.5;
+          flex-grow: 1;
         }
         
-        .arrow-icon {
-          width: 16px;
-          height: 16px;
-          stroke-width: 2;
+        .card-link {
+          margin-top: auto;
+          font-size: 0.875rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: bold;
+          color: #374151;
+        }
+        
+        .mobile-info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.75rem;
+          color: #64748b;
+          margin-bottom: 12px;
+        }
+        
+        .mobile-info span {
+          background: #f8fafc;
+          padding: 2px 6px;
+          border-radius: 4px;
         }
         
         .x-axis-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-top: 24px;
+          margin-top: 40px;
           position: relative;
         }
         
@@ -181,35 +135,117 @@
           font-size: 1.125rem;
           font-weight: 600;
           color: #374151;
-          display: flex;
-          align-items: center;
-          gap: 8px;
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        /* Nooled */
+        .y-axis-arrow {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 2px;
+          background: #6b7280;
+          transition: all 0.3s ease;
+        }
+        
+        .y-axis-arrow:hover {
+          background: #4b5563;
+          width: 2.5px;
+        }
+        
+        .y-axis-arrow::after {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: -4px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 10px solid #6b7280;
+          transition: all 0.3s ease;
+        }
+        
+        .y-axis-arrow:hover::after {
+          border-bottom-color: #4b5563;
         }
         
         .x-axis-arrow {
-          width: 16px;
-          height: 16px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #6b7280;
+          transition: all 0.3s ease;
         }
         
-        /* Color classes */
-        .bg-red { background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); }
-        .bg-orange { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); }
-        .bg-yellow { background: linear-gradient(135deg, #fefce8 0%, #fde047 100%); }
-        .bg-blue { background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%); }
-        .bg-indigo { background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%); }
-        .bg-purple { background: linear-gradient(135deg, #faf5ff 0%, #d8b4fe 100%); }
-        .bg-green { background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%); }
-        .bg-teal { background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%); }
-        .bg-emerald { background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%); }
+        .x-axis-arrow:hover {
+          background: #4b5563;
+          height: 2.5px;
+        }
         
-        /* Mobile responsive */
+        .x-axis-arrow::after {
+          content: '';
+          position: absolute;
+          right: -8px;
+          top: -4px;
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 10px solid #6b7280;
+          transition: all 0.3s ease;
+        }
+        
+        .x-axis-arrow:hover::after {
+          border-left-color: #4b5563;
+        }
+        
+        /* Värviklassid */
+        .bg-red { 
+          background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important; 
+        }
+        .bg-orange { 
+          background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important; 
+        }
+        .bg-yellow { 
+          background: linear-gradient(135deg, #fefce8 0%, #fde047 100%) !important; 
+        }
+        .bg-blue { 
+          background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%) !important; 
+        }
+        .bg-indigo { 
+          background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%) !important; 
+        }
+        .bg-purple { 
+          background: linear-gradient(135deg, #faf5ff 0%, #d8b4fe 100%) !important; 
+        }
+        .bg-green { 
+          background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%) !important; 
+        }
+        .bg-teal { 
+          background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%) !important; 
+        }
+        .bg-emerald { 
+          background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%) !important; 
+        }
+        
+        /* Mobiilne */
         @media (max-width: 768px) {
           .matrix-container {
             margin-left: 0;
+            margin-bottom: 20px;
           }
           
           .y-axis-label,
-          .y-axis-values {
+          .y-axis-values,
+          .y-axis-arrow,
+          .x-axis-arrow {
             display: none;
           }
           
@@ -217,30 +253,13 @@
             grid-template-columns: 1fr;
           }
           
-          .matrix-title {
-            font-size: 2rem;
-          }
-          
-          .matrix-subtitle {
-            font-size: 1.125rem;
-          }
-          
           .street-type-card {
             padding: 16px;
+            min-height: 180px;
           }
           
-          .mobile-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: #64748b;
-            margin-bottom: 12px;
-          }
-          
-          .mobile-info span {
-            background: #f8fafc;
-            padding: 2px 6px;
-            border-radius: 4px;
+          .x-axis-container {
+            display: none;
           }
         }
         
@@ -252,20 +271,18 @@
       </style>
       
       <div class="matrix-container">
-        <div class="y-axis-label">
-          <svg class="y-axis-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-          </svg>
-          Liikuvus
-        </div>
+        <div class="y-axis-label">Liikuvus</div>
         <div class="y-axis-values">
           <span class="y-axis-value">Kõrge</span>
           <span class="y-axis-value">Keskmine</span>
           <span class="y-axis-value">Madal</span>
         </div>
         
+        <div class="y-axis-arrow"></div>
+        <div class="x-axis-arrow"></div>
+        
         <div class="matrix-grid">
-          <!-- Row 1: High Mobility (Ühendustänavad) -->
+          <!-- Row 1: Kõrge liikuvus (Ühendustänavad) -->
           <a href="/tanavatyyp/lihtne-yhendustanav" class="street-type-card bg-red">
             <div class="mobile-info">
               <span>Liikuvus: Kõrge</span>
@@ -302,7 +319,7 @@
             </div>
           </a>
           
-          <!-- Row 2: Medium Mobility (Jaotustänavad) -->
+          <!-- Row 2: Keskmine liikuvus (Jaotustänavad) -->
           <a href="/tanavatyyp/lihtne-jaotustanav" class="street-type-card bg-blue">
             <div class="mobile-info">
               <span>Liikuvus: Keskmine</span>
@@ -339,7 +356,7 @@
             </div>
           </a>
           
-          <!-- Row 3: Low Mobility (Kodutänavad) -->
+          <!-- Row 3: Madal liikuvus (Kodutänavad) -->
           <a href="/tanavatyyp/lihtne-kodutanav" class="street-type-card bg-green">
             <div class="mobile-info">
               <span>Liikuvus: Madal</span>
@@ -379,23 +396,19 @@
         
         <div class="x-axis-container">
           <span class="x-axis-value">Lihtne</span>
-          <div class="x-axis-label">
-            Kohaväärtus
-            <svg class="x-axis-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </div>
+          <span class="x-axis-value">Linlik</span>
           <span class="x-axis-value">Esinduslik</span>
+          <div class="x-axis-label">Kohaväärtus</div>
         </div>
       </div>
     </div>
   `;
   
-  // Lisa maatriks script tagi asukohta
+  // Asenda script tag maatriksiga
   if (currentScript && currentScript.parentNode) {
-    const matrixDiv = document.createElement('div');
-    matrixDiv.innerHTML = matrixHTML;
-    currentScript.parentNode.insertBefore(matrixDiv.firstElementChild, currentScript.nextSibling);
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = matrixHTML;
+    currentScript.parentNode.replaceChild(tempDiv.firstElementChild, currentScript);
   } else {
     // Fallback - lisa lehe lõppu
     document.addEventListener('DOMContentLoaded', function() {
