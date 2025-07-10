@@ -176,7 +176,7 @@
         
         .x-axis-arrow {
           position: absolute;
-          bottom: -60;
+          bottom: 10px;
           left: 0;
           width: 100%;
           height: 2px;
