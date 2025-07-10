@@ -132,17 +132,10 @@
           <a href="/ruumijuhtimine" style="padding: 8px 12px; text-decoration: none; color: #374151; font-weight: 500; border-radius: 6px; transition: all 0.2s;">Ruumijuhtimine</a>
           
           <!-- Otsing -->
-          <div style="padding: 8px 12px; cursor: pointer; border-radius: 6px; transition: all 0.2s; color: #374151;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.2s;">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </svg>
-          </div>
+          
         </div>
       </div>
       
-      <!-- Spacer et sisu ei jääks navigatsiooni alla -->
-      <div style="height: 10px;"></div>
     `;
     
     // Insert navigation at the beginning of body
