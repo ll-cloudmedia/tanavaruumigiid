@@ -34,47 +34,47 @@
                 <h3 style="margin: 0 0 16px 0; text-align: center; font-size: 18px; font-weight: 600; color: #1f2937;">Vali sobiv tänavatüüp</h3>
                 
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
-                  <a href="/tanavatyybid/lihtne-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fefce8, #fde047)" style="padding: 14px; background: linear-gradient(135deg, #fefce8, #fde047); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(239, 68, 68, 0.2);">
+                  <a href="/tanavatyybid/lihtne-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fefce8, #fde047)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #fefce8, #fde047); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(239, 68, 68, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Lihtne ühendustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Praktilised läbiliikluse lahendused</div>
                   </a>
                   
-                  <a href="/tanavatyybid/linlik-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fff7ed, #fed7aa)" style="padding: 14px; background: linear-gradient(135deg, #fff7ed, #fed7aa); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(249, 115, 22, 0.2);">
+                  <a href="/tanavatyybid/linlik-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fff7ed, #fed7aa)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #fff7ed, #fed7aa); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(249, 115, 22, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Linlik ühendustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Mitmekesine linnaline keskkond</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fef2f2, #fecaca)" style="padding: 14px; background: linear-gradient(135deg, #fef2f2, #fecaca); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(234, 179, 8, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-yhendustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #fef2f2, #fecaca)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #fef2f2, #fecaca); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(234, 179, 8, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik ühendustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Strateegiline ühendus kõrge kvaliteediga</div>
                   </a>
                   
-                  <a href="/tanavatyybid/lihtne-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #eff6ff, #bfdbfe)" style="padding: 14px; background: linear-gradient(135deg, #eff6ff, #bfdbfe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(59, 130, 246, 0.2);">
+                  <a href="/tanavatyybid/lihtne-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #eff6ff, #bfdbfe)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #eff6ff, #bfdbfe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(59, 130, 246, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Lihtne jaotustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Liikluse jaotamine asumi kontekstis</div>
                   </a>
                   
-                  <a href="/tanavatyybid/linlik-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #faf5ff, #d8b4fe)" style="padding: 14px; background: linear-gradient(135deg, #faf5ff, #d8b4fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(99, 102, 241, 0.2);">
+                  <a href="/tanavatyybid/linlik-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #faf5ff, #d8b4fe)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #faf5ff, #d8b4fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(99, 102, 241, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Linlik jaotustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Tasakaalus linnaruum</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #eef2ff, #c7d2fe)" style="padding: 14px; background: linear-gradient(135deg, #eef2ff, #c7d2fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(139, 92, 246, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-jaotustanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #eef2ff, #c7d2fe)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #eef2ff, #c7d2fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(139, 92, 246, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik jaotustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Kvaliteetne avalik ruum</div>
                   </a>
                   
-                  <a href="/tanavatyybid/lihtne-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #ecfdf5, #a7f3d0)" style="padding: 14px; background: linear-gradient(135deg, #ecfdf5, #a7f3d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(34, 197, 94, 0.2);">
+                  <a href="/tanavatyybid/lihtne-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #ecfdf5, #a7f3d0)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #ecfdf5, #a7f3d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(34, 197, 94, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Lihtne kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Rahulik elukeskkond</div>
                   </a>
                   
-                  <a href="/tanavatyybid/linlik-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #f0fdf4, #bbf7d0)" style="padding: 14px; background: linear-gradient(135deg, #f0fdf4, #bbf7d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(6, 182, 212, 0.2);">
+                  <a href="/tanavatyybid/linlik-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #f0fdf4, #bbf7d0)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #f0fdf4, #bbf7d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(6, 182, 212, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Linlik kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Tihe linnastruktuur</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #f0fdfa, #99f6e4)" style="padding: 14px; background: linear-gradient(135deg, #f0fdfa, #99f6e4); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(16, 185, 129, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-kodutanav" class="street-type-card" data-original-bg="linear-gradient(135deg, #f0fdfa, #99f6e4)" style="padding: 12px 14px 8px 14px; background: linear-gradient(135deg, #f0fdfa, #99f6e4); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(16, 185, 129, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Prestiižne elukeskkond</div>
                   </a>
