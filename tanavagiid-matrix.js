@@ -142,15 +142,7 @@
         }
         
         /* Nooled */
-        .y-axis-arrow {
-          position: absolute;
-          left: -10;
-          top: 0;
-          height: 100%;
-          width: 2px;
-          background: #6b7280;
-          transition: all 0.3s ease;
-        }
+      
         
         .y-axis-arrow:hover {
           background: #4b5563;
@@ -174,16 +166,7 @@
           border-bottom-color: #4b5563;
         }
         
-        .x-axis-arrow {
-          position: absolute;
-          bottom: 10px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: #6b7280;
-          transition: all 0.3s ease;
-        }
-        
+          
         .x-axis-arrow:hover {
           background: #4b5563;
           height: 2.5px;
