@@ -81,7 +81,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
-                  <a href="/tanatyybid" style="color: #3b82f6; text-decoration: none; font-weight: 500; font-size: 14px;">Vaata kõiki tänavatüüpe →</a>
+                  <a href="/tanavatyybid" style="color: #3b82f6; text-decoration: none; font-weight: 500; font-size: 14px;">Vaata kõiki tänavatüüpe →</a>
                 </div>
               </div>
             </div>
