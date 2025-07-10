@@ -34,7 +34,7 @@
                 <h3 style="margin: 0 0 16px 0; text-align: center; font-size: 18px; font-weight: 600; color: #1f2937;">Vali sobiv tänavatüüp</h3>
                 
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
-                  <a href="/tanavatyybid/lihtne-yhendustanav" style="padding: 14px; background: linear-gradient(135deg, #fef2f2, #fecaca); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(239, 68, 68, 0.2);">
+                  <a href="/tanavatyybid/lihtne-yhendustanav" style="padding: 14px; background: linear-gradient(135deg, #fefce8, #fde047); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(239, 68, 68, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Lihtne ühendustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Praktilised läbiliikluse lahendused</div>
                   </a>
@@ -44,7 +44,7 @@
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Mitmekesine linnaline keskkond</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-yhendustanav" style="padding: 14px; background: linear-gradient(135deg, #fefce8, #fde047); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(234, 179, 8, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-yhendustanav" style="padding: 14px; background: linear-gradient(135deg, #fef2f2, #fecaca); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(234, 179, 8, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik ühendustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Strateegiline ühendus kõrge kvaliteediga</div>
                   </a>
@@ -54,27 +54,27 @@
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Liikluse jaotamine asumi kontekstis</div>
                   </a>
                   
-                  <a href="/tanavatyybid/linlik-jaotustanav" style="padding: 14px; background: linear-gradient(135deg, #eef2ff, #c7d2fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(99, 102, 241, 0.2);">
+                  <a href="/tanavatyybid/linlik-jaotustanav" style="padding: 14px; background: linear-gradient(135deg, #faf5ff, #d8b4fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(99, 102, 241, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Linlik jaotustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Tasakaalus linnaruum</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-jaotustanav" style="padding: 14px; background: linear-gradient(135deg, #faf5ff, #d8b4fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(139, 92, 246, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-jaotustanav" style="padding: 14px; background: linear-gradient(135deg, #eef2ff, #c7d2fe); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(139, 92, 246, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik jaotustänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Kvaliteetne avalik ruum</div>
                   </a>
                   
-                  <a href="/tanavatyybid/lihtne-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #f0fdf4, #bbf7d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(34, 197, 94, 0.2);">
+                  <a href="/tanavatyybid/lihtne-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #ecfdf5, #a7f3d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(34, 197, 94, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Lihtne kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Rahulik elukeskkond</div>
                   </a>
                   
-                  <a href="/tanavatyybid/linlik-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #f0fdfa, #99f6e4); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(6, 182, 212, 0.2);">
+                  <a href="/tanavatyybid/linlik-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #f0fdf4, #bbf7d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(6, 182, 212, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Linlik kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Tihe linnastruktuur</div>
                   </a>
                   
-                  <a href="/tanavatyybid/esinduslik-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #ecfdf5, #a7f3d0); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(16, 185, 129, 0.2);">
+                  <a href="/tanavatyybid/esinduslik-kodutanav" style="padding: 14px; background: linear-gradient(135deg, #f0fdfa, #99f6e4); border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s; display: block; border: 1px solid rgba(16, 185, 129, 0.2);">
                     <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px; color: #1f2937;">Esinduslik kodutänav</div>
                     <div style="font-size: 12px; color: #6b7280; line-height: 1.3;">Prestiižne elukeskkond</div>
                   </a>
@@ -106,8 +106,8 @@
                   <a href="/ruumisaastlikkus" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #eab308;">3. Ruumisäästlikkus</a>
                   <a href="/ohutu-kiirus-andestav-liikumisruum" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #22c55e;">4. Ohutu kiirus ja andestav liikumisruum</a>
                   <a href="/liikumisaktiivsuse-suhtlemise-toetamine" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #06b6d4;">5. Liikumisaktiivsuse ja suhtlemise toetamine</a>
-                  <a href="/linnaloodus-ruum-voimalus" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #3b82f6;">6. Linnaloodus kui ruum ja võimalus</a>
-                  <a href="/disain-norgimast-kasutajast-lahtuvalt" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #6366f1;">7. Disain nõrgimast kasutajast lähtuvalt</a>
+                  <a href="/linnaloodusele-eesoigus" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #3b82f6;">6. Linnaloodus kui ruum ja võimalus</a>
+                  <a href="/disaini-norgima-kasutaja-jargi" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #6366f1;">7. Disain nõrgimast kasutajast lähtuvalt</a>
                   <a href="/muretu-jalakaijaruum" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #8b5cf6;">8. Muretu jalakäijaruum</a>
                   <a href="/voimalused-peatumiseks" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #a855f7;">9. Võimalused peatumiseks</a>
                   <a href="/tanavapinna-katted-intuitiivne-kasutus" style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; text-decoration: none; color: #374151; font-size: 14px; transition: all 0.2s; display: block; border-left: 3px solid #d946ef;">10. Tänavapinna katted ja intuitiivne kasutus</a>
