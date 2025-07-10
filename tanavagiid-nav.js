@@ -142,7 +142,7 @@
       </div>
       
       <!-- Spacer et sisu ei jääks navigatsiooni alla -->
-      <div style="height: 70px;"></div>
+      <div style="height: 10px;"></div>
     `;
     
     // Insert navigation at the beginning of body
