@@ -269,21 +269,24 @@
           <a href="/tanavatyybid/lihtne-yhendustanav" class="street-type-card bg-red">
             
             <h3 class="card-title">Lihtne ühendustänav</h3>
-            <p class="card-description">Magistraal, linna või asula põhitänav või asula piirkondi ühendav, eelkõige läbiliikumiseks mõeldud tänav</p>
+            <p class="card-description">Linna või asulat läbiv ja ümbrusega ühendav, eelkõige läbiliikumisele suunatud, ühistransporti võimaldav tänav või maantee, kus jalakäija tähtsus ja kohaväärtus on väike. 
+</p>
            
           </a>
           
           <a href="/tanavatyybid/linlik-yhendustanav" class="street-type-card bg-orange">
             
             <h3 class="card-title">Linlik ühendustänav</h3>
-            <p class="card-description">Suure liiklusväärtusega ja keskmise kohaväärtusega tänav, mis ühendab linna erinevaid piirkondi ning pakub mitmekesist linnaruumi kogemust.</p>
+            <p class="card-description">Linna või asulat läbiva tänava atraktiivsem osa, eri ühistranspordiliine ja läbiliikumist võimaldav, mitmekesist linnaruumi ning jalakäijale kvaliteeti pakkuv tänav.
+</p>
            
           </a>
           
           <a href="/tanavatyybid/esinduslik-yhendustanav" class="street-type-card bg-yellow">
            
             <h3 class="card-title">Esinduslik ühendustänav</h3>
-            <p class="card-description">Suure liiklusväärtusega ja kõrge kohaväärtusega prestiižne tänav, mis on linna nägu ja avaliku ruumi kese.</p>
+            <p class="card-description">Keskse asukohaga ühistransporti ja läbiliikumist võimaldava tänava atraktiivsem ja jalakäijasõbralik osa, kvaliteetne avalik ruum, mis on ühtlasi asula identiteedi ja kohaliku ettevõtluse kandjaks.     
+</p>
            
           </a>
           
@@ -291,21 +294,21 @@
           <a href="/tanavatyybid/lihtne-jaotustanav" class="street-type-card bg-blue">
             
             <h3 class="card-title">Lihtne jaotustänav</h3>
-            <p class="card-description">Keskmise liiklusväärtusega ja lihtsa kohaväärtusega peamiselt läbiliikumiseks ja juurdepääsuks kasutatav tänav, mille ääres ei asu suure kasutajate arvuga sihtkohti ja ühissõidukipeatuseid.</p>
+            <p class="card-description">Asula või asumi sisesele läbiliikumisele suunatud ja ühistransporti võimaldav väiksem tänav, kus üldiselt ei asu sihtkohti ning kus jalakäija tähtsus ja kohaväärtus on väike.</p>
            
           </a>
           
           <a href="/tanavatyybid/linlik-jaotustanav" class="street-type-card bg-indigo">
            
             <h3 class="card-title">Linlik jaotustänav</h3>
-            <p class="card-description">Keskmise liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub tasakaalustatud linnaruumi kogemust ja toetab nii liikuvust kui ka kohalikku elu.</p>
+            <p class="card-description">Asula või asumi sisesele läbiliikumisele ja ühistranspordile suunatud väiksema tänava atraktiivsem osa, mis toetab võrdselt nii liikuvust kui kohalikku elu.</p>
            
           </a>
           
           <a href="/tanavatyybid/esinduslik-jaotustanav" class="street-type-card bg-purple">
            
             <h3 class="card-title">Esinduslik jaotustänav</h3>
-            <p class="card-description">Keskmise liiklusväärtusega ja kõrge kohaväärtusega kvaliteetne avalik ruum, mis on piirkonna uhkus ja identiteedi kandja.</p>
+            <p class="card-description">Asula või asumi sisesele ühistranspordile ja läbiliikumisele suunatud väiksema tänava atraktiivsem, jalakäijasõbralikum osa, kvaliteetne avalik ruum, mis on ühtlasi piirkonna identiteedi ja ettevõtluse kandjaks.</p>
             
           </a>
           
@@ -313,21 +316,21 @@
           <a href="/tanavatyybid/lihtne-kodutanav" class="street-type-card bg-green">
             
             <h3 class="card-title">Lihtne kodutänav</h3>
-            <p class="card-description">Kitsad, vähese liiklusega ja hõreda hoonestusega tänavad, eelkõige asumite elukeskkonna olulised osad, millele tuleb ehitamisel ja rekonstrueerimisel olulist tähelepanu pöörata.</p>
+            <p class="card-description">Vähese liiklusega, kitsam või hõreda hoonestusega, juurdepääsule suunatud rahulik tänav, mis on enamik asulate tänavaid ja on elukeskkonna või töökeskkonna olulised osad.</p>
             
           </a>
           
           <a href="/tanavatyybid/linlik-kodutanav" class="street-type-card bg-teal">
             
             <h3 class="card-title">Linlik kodutänav</h3>
-            <p class="card-description">Madala liiklusväärtusega ja keskmise kohaväärtusega tänav, mis pakub kvaliteetset elukeskkonda tihedas linnastruktuuris.</p>
+            <p class="card-description">Vähese liiklusega ja rahulikku juurdepääsu võimaldav tänav või tänava atraktiivsem osa, mis pakub kvaliteetset elukeskkonda tihedamas linnastruktuuris.</p>
           
           </a>
           
           <a href="/tanavatyybid/esinduslik-kodutanav" class="street-type-card bg-emerald">
             
             <h3 class="card-title">Esinduslik kodutänav</h3>
-            <p class="card-description">Prestiižne elukeskkond, mis pakub erakordset elukvaliteeti ja on piirkonna uhkus.</p>
+            <p class="card-description">Asumi peatänav või vähese liiklusega kvaliteetne avalik ruum, kus jalakäijad on eelistatud ning   ettevõtlust ja ühiskondlikku elu on toetatud.</p>
            
           </a>
         </div>
